@@ -1,5 +1,3 @@
-import sun.rmi.rmic.iiop.ValueType;
-
 import java.lang.management.ManagementFactory;
 import java.lang.management.MemoryMXBean;
 import java.util.ArrayList;

@@ -1,6 +1,6 @@
 package com.mango.clazz.executor;
 
-import sun.reflect.CallerSensitive;
+import jdk.internal.reflect.CallerSensitive;
 
 import java.io.*;
 import java.nio.channels.Channel;
@@ -103,11 +103,6 @@ public class MySystem {
 
     public static void runFinalization() {
         System.runFinalization();
-    }
-
-    @Deprecated
-    public static void runFinalizersOnExit(boolean value) {
-        System.runFinalizersOnExit(value);
     }
 
     @CallerSensitive
