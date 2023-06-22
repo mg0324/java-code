@@ -17,6 +17,7 @@
         <module>demo-future</module>
         <module>demo-solon</module>
         <module>demo-serial</module>
+        <module>demo-web3.0</module>
     </modules>
 
     <packaging>pom</packaging>
