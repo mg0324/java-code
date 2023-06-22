@@ -1,0 +1,38 @@
+@startmindmap
+'https://plantuml.com/mindmap-diagram
+
+title Java关键字synchronized
+
+* synchronized
+** 定义
+*** 同步块，实现线程间的同步。
+** 特性
+*** 同步块内，只有一个线程能访问，因此保存了原子性、可见性和有序性
+** synchronized底层实现原理
+*** 字节码monitorenter，monitorexit
+**** 对象锁/监视器锁
+*** 字节码ACC_SYNCHRONIZED
+** 使用方式
+*** 修饰代码块（对象/类）
+*** 修饰实例方法
+*** 修饰静态方法
+** synchronized vs ReentrantLock
+
+** 提高锁性能
+*** 减少锁持有时间
+*** 减小锁粒度
+*** 用读写分离锁替换独占锁
+*** 锁分离
+
+** 锁优化
+*** 偏向锁
+*** 轻量级锁
+*** 自旋锁与自适应自旋
+*** 重量级锁
+*** 锁粗化
+*** 锁消除
+
+** 锁升级
+
+
+@endmindmap

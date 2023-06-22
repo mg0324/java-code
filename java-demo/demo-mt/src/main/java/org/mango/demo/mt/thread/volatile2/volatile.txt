@@ -1,0 +1,573 @@
+/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/bin/java -server -Xcomp -XX:+UnlockDiagnosticVMOptions -XX:CompileCommand=dontinline,*VolatileSingleton.getInstance -XX:CompileCommand=compileonly,*VolatileSingleton.getInstance -XX:+PrintAssembly "-javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=62705:/Applications/IntelliJ IDEA CE.app/Contents/bin" -Dfile.encoding=UTF-8 -classpath /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/ext/cldrdata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/ext/jaccess.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/ext/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/ext/nashorn.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/jfxswt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/lib/packager.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/lib/tools.jar:/Users/mango/git/java-study/demo-mt/target/classes:/Users/mango/.m2/repository/org/openjdk/jol/jol-core/0.13/jol-core-0.13.jar:/Users/mango/.m2/repository/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar:/Users/mango/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/mango/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/mango/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/mango/.m2/repository/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar:/Users/mango/.m2/repository/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.jar:/Users/mango/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:/Users/mango/.m2/repository/io/netty/netty-all/4.1.52.Final/netty-all-4.1.52.Final.jar:/Users/mango/.m2/repository/org/projectlombok/lombok/1.18.16/lombok-1.18.16.jar org.mango.demo.mt.VolatileSingleton
+Java HotSpot(TM) 64-Bit Server VM warning: PrintAssembly is enabled; turning on DebugNonSafepoints to gain additional output
+CompilerOracle: dontinline *VolatileSingleton.getInstance
+CompilerOracle: compileonly *VolatileSingleton.getInstance
+Loaded disassembler from /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/server/hsdis-amd64.dylib
+Decoding compiled method 0x0000000105c2e9d0:
+Code:
+[Disassembling for mach='i386:x86-64']
+[Entry Point]
+[Verified Entry Point]
+[Constants]
+  # {method} {0x00000001042d6ab0} 'getInstance' '()Lorg/mango/demo/mt/VolatileSingleton;' in 'org/mango/demo/mt/VolatileSingleton'
+  #           [sp+0x50]  (sp of caller)
+  0x0000000105c2eb60: mov    %eax,-0x14000(%rsp)
+  0x0000000105c2eb67: push   %rbp
+  0x0000000105c2eb68: sub    $0x40,%rsp
+  0x0000000105c2eb6c: movabs $0x1042d6c90,%rax  ;   {metadata(method data for {method} {0x00000001042d6ab0} 'getInstance' '()Lorg/mango/demo/mt/VolatileSingleton;' in 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c2eb76: mov    0xdc(%rax),%edx
+  0x0000000105c2eb7c: add    $0x8,%edx
+  0x0000000105c2eb7f: mov    %edx,0xdc(%rax)
+  0x0000000105c2eb85: movabs $0x1042d6ab0,%rax  ;   {metadata({method} {0x00000001042d6ab0} 'getInstance' '()Lorg/mango/demo/mt/VolatileSingleton;' in 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c2eb8f: and    $0x0,%edx
+  0x0000000105c2eb92: cmp    $0x0,%edx
+  0x0000000105c2eb95: je     0x0000000105c2ee5e
+  0x0000000105c2eb9b: movabs $0x795779f40,%rax  ;   {oop(a 'java/lang/Class' = 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c2eba5: mov    0x68(%rax),%eax
+  0x0000000105c2eba8: shl    $0x3,%rax          ;*getstatic instance
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@0 (line 7)
+
+  0x0000000105c2ebac: cmp    $0x0,%rax
+  0x0000000105c2ebb0: movabs $0x1042d6c90,%rax  ;   {metadata(method data for {method} {0x00000001042d6ab0} 'getInstance' '()Lorg/mango/demo/mt/VolatileSingleton;' in 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c2ebba: movabs $0x108,%rdx
+  0x0000000105c2ebc4: jne    0x0000000105c2ebd4
+  0x0000000105c2ebca: movabs $0x118,%rdx
+  0x0000000105c2ebd4: mov    (%rax,%rdx,1),%rsi
+  0x0000000105c2ebd8: lea    0x1(%rsi),%rsi
+  0x0000000105c2ebdc: mov    %rsi,(%rax,%rdx,1)
+  0x0000000105c2ebe0: jne    0x0000000105c2ede0  ;*ifnonnull
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@3 (line 7)
+
+  0x0000000105c2ebe6: movabs $0x795779f40,%rdx  ;   {oop(a 'java/lang/Class' = 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c2ebf0: lea    0x28(%rsp),%rsi
+  0x0000000105c2ebf5: mov    %rdx,0x8(%rsi)
+  0x0000000105c2ebf9: mov    (%rdx),%rax        ; implicit exception: dispatches to 0x0000000105c2ee75
+  0x0000000105c2ebfc: mov    %rax,%rdi
+  0x0000000105c2ebff: and    $0x7,%rdi
+  0x0000000105c2ec03: cmp    $0x5,%rdi
+  0x0000000105c2ec07: jne    0x0000000105c2ec8e
+  0x0000000105c2ec0d: mov    0x8(%rdx),%edi
+  0x0000000105c2ec10: shl    $0x3,%rdi
+  0x0000000105c2ec14: mov    0xa8(%rdi),%rdi
+  0x0000000105c2ec1b: or     %r15,%rdi
+  0x0000000105c2ec1e: xor    %rax,%rdi
+  0x0000000105c2ec21: and    $0xffffffffffffff87,%rdi
+  0x0000000105c2ec25: je     0x0000000105c2ecb6
+  0x0000000105c2ec2b: test   $0x7,%rdi
+  0x0000000105c2ec32: jne    0x0000000105c2ec7b
+  0x0000000105c2ec34: test   $0x300,%rdi
+  0x0000000105c2ec3b: jne    0x0000000105c2ec5a
+  0x0000000105c2ec3d: and    $0x37f,%rax
+  0x0000000105c2ec44: mov    %rax,%rdi
+  0x0000000105c2ec47: or     %r15,%rdi
+  0x0000000105c2ec4a: lock cmpxchg %rdi,(%rdx)
+  0x0000000105c2ec4f: jne    0x0000000105c2ee7a
+  0x0000000105c2ec55: jmpq   0x0000000105c2ecb6
+  0x0000000105c2ec5a: mov    0x8(%rdx),%edi
+  0x0000000105c2ec5d: shl    $0x3,%rdi
+  0x0000000105c2ec61: mov    0xa8(%rdi),%rdi
+  0x0000000105c2ec68: or     %r15,%rdi
+  0x0000000105c2ec6b: lock cmpxchg %rdi,(%rdx)
+  0x0000000105c2ec70: jne    0x0000000105c2ee7a
+  0x0000000105c2ec76: jmpq   0x0000000105c2ecb6
+  0x0000000105c2ec7b: mov    0x8(%rdx),%edi
+  0x0000000105c2ec7e: shl    $0x3,%rdi
+  0x0000000105c2ec82: mov    0xa8(%rdi),%rdi
+  0x0000000105c2ec89: lock cmpxchg %rdi,(%rdx)
+  0x0000000105c2ec8e: mov    (%rdx),%rax
+  0x0000000105c2ec91: or     $0x1,%rax
+  0x0000000105c2ec95: mov    %rax,(%rsi)
+  0x0000000105c2ec98: lock cmpxchg %rsi,(%rdx)
+  0x0000000105c2ec9d: je     0x0000000105c2ecb6
+  0x0000000105c2eca3: sub    %rsp,%rax
+  0x0000000105c2eca6: and    $0xfffffffffffff007,%rax
+  0x0000000105c2ecad: mov    %rax,(%rsi)
+  0x0000000105c2ecb0: jne    0x0000000105c2ee7a  ;*monitorenter
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@10 (line 8)
+
+  0x0000000105c2ecb6: movabs $0x795779f40,%rdx  ;   {oop(a 'java/lang/Class' = 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c2ecc0: mov    0x68(%rdx),%edx
+  0x0000000105c2ecc3: shl    $0x3,%rdx          ;*getstatic instance
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@11 (line 9)
+
+  0x0000000105c2ecc7: cmp    $0x0,%rdx
+  0x0000000105c2eccb: movabs $0x1042d6c90,%rdx  ;   {metadata(method data for {method} {0x00000001042d6ab0} 'getInstance' '()Lorg/mango/demo/mt/VolatileSingleton;' in 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c2ecd5: movabs $0x128,%rsi
+  0x0000000105c2ecdf: jne    0x0000000105c2ecef
+  0x0000000105c2ece5: movabs $0x138,%rsi
+  0x0000000105c2ecef: mov    (%rdx,%rsi,1),%rdi
+  0x0000000105c2ecf3: lea    0x1(%rdi),%rdi
+  0x0000000105c2ecf7: mov    %rdi,(%rdx,%rsi,1)
+  0x0000000105c2ecfb: jne    0x0000000105c2ed95  ;*ifnonnull
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@14 (line 9)
+
+  0x0000000105c2ed01: movabs $0x7c0060828,%rdx  ;   {metadata('org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c2ed0b: mov    0x60(%r15),%rax
+  0x0000000105c2ed0f: lea    0x10(%rax),%rdi
+  0x0000000105c2ed13: cmp    0x70(%r15),%rdi
+  0x0000000105c2ed17: ja     0x0000000105c2ee8d
+  0x0000000105c2ed1d: mov    %rdi,0x60(%r15)
+  0x0000000105c2ed21: mov    0xa8(%rdx),%rcx
+  0x0000000105c2ed28: mov    %rcx,(%rax)
+  0x0000000105c2ed2b: mov    %rdx,%rcx
+  0x0000000105c2ed2e: shr    $0x3,%rcx
+  0x0000000105c2ed32: mov    %ecx,0x8(%rax)
+  0x0000000105c2ed35: xor    %rcx,%rcx
+  0x0000000105c2ed38: mov    %ecx,0xc(%rax)
+  0x0000000105c2ed3b: xor    %rcx,%rcx          ;*new  ; - org.mango.demo.mt.VolatileSingleton::getInstance@17 (line 10)
+
+  0x0000000105c2ed3e: mov    %rax,%rsi
+  0x0000000105c2ed41: movabs $0x1042d6c90,%rdi  ;   {metadata(method data for {method} {0x00000001042d6ab0} 'getInstance' '()Lorg/mango/demo/mt/VolatileSingleton;' in 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c2ed4b: addq   $0x1,0x148(%rdi)
+  0x0000000105c2ed53: mov    %rax,%rsi          ;*invokespecial <init>
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@21 (line 10)
+
+  0x0000000105c2ed56: mov    %rax,0x20(%rsp)
+  0x0000000105c2ed5b: nop
+  0x0000000105c2ed5c: nop
+  0x0000000105c2ed5d: nop
+  0x0000000105c2ed5e: nop
+  0x0000000105c2ed5f: callq  0x0000000105b710a0  ; OopMap{[32]=Oop [48]=Oop off=516}
+                                                ;*invokespecial <init>
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@21 (line 10)
+                                                ;   {optimized virtual_call}
+  0x0000000105c2ed64: movabs $0x795779f40,%rax  ;   {oop(a 'java/lang/Class' = 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c2ed6e: mov    0x20(%rsp),%rsi
+  0x0000000105c2ed73: mov    %rsi,%r10
+  0x0000000105c2ed76: shr    $0x3,%r10
+  0x0000000105c2ed7a: mov    %r10d,0x68(%rax)
+  0x0000000105c2ed7e: shr    $0x9,%rax
+  0x0000000105c2ed82: movabs $0xffa00000,%rsi
+  0x0000000105c2ed8c: movb   $0x0,(%rax,%rsi,1)
+  0x0000000105c2ed90: lock addl $0x0,(%rsp)     ;*putstatic instance
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@24 (line 10)
+
+  0x0000000105c2ed95: movabs $0x795779f40,%rax  ;   {oop(a 'java/lang/Class' = 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c2ed9f: lea    0x28(%rsp),%rax
+  0x0000000105c2eda4: mov    0x8(%rax),%rdi
+  0x0000000105c2eda8: mov    (%rdi),%rsi
+  0x0000000105c2edab: and    $0x7,%rsi
+  0x0000000105c2edaf: cmp    $0x5,%rsi
+  0x0000000105c2edb3: je     0x0000000105c2edd0
+  0x0000000105c2edb9: mov    (%rax),%rsi
+  0x0000000105c2edbc: test   %rsi,%rsi
+  0x0000000105c2edbf: je     0x0000000105c2edd0
+  0x0000000105c2edc5: lock cmpxchg %rsi,(%rdi)
+  0x0000000105c2edca: jne    0x0000000105c2ee9a  ;*monitorexit
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@28 (line 12)
+
+  0x0000000105c2edd0: movabs $0x1042d6c90,%rax  ;   {metadata(method data for {method} {0x00000001042d6ab0} 'getInstance' '()Lorg/mango/demo/mt/VolatileSingleton;' in 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c2edda: incl   0x158(%rax)        ;*goto
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@29 (line 12)
+
+  0x0000000105c2ede0: movabs $0x795779f40,%rax  ;   {oop(a 'java/lang/Class' = 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c2edea: mov    0x68(%rax),%eax
+  0x0000000105c2eded: shl    $0x3,%rax          ;*getstatic instance
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@37 (line 14)
+
+  0x0000000105c2edf1: add    $0x40,%rsp
+  0x0000000105c2edf5: pop    %rbp
+  0x0000000105c2edf6: test   %eax,-0x445acfc(%rip)        # 0x00000001017d4100
+                                                ;   {poll_return}
+  0x0000000105c2edfc: retq                      ;*areturn
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@40 (line 14)
+
+  0x0000000105c2edfd: mov    0x2a8(%r15),%rax
+  0x0000000105c2ee04: xor    %r10,%r10
+  0x0000000105c2ee07: mov    %r10,0x2a8(%r15)
+  0x0000000105c2ee0e: xor    %r10,%r10
+  0x0000000105c2ee11: mov    %r10,0x2b0(%r15)
+  0x0000000105c2ee18: mov    %rax,%rsi
+  0x0000000105c2ee1b: movabs $0x795779f40,%rax  ;   {oop(a 'java/lang/Class' = 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c2ee25: lea    0x28(%rsp),%rax
+  0x0000000105c2ee2a: mov    0x8(%rax),%rbx
+  0x0000000105c2ee2e: mov    (%rbx),%rdi
+  0x0000000105c2ee31: and    $0x7,%rdi
+  0x0000000105c2ee35: cmp    $0x5,%rdi
+  0x0000000105c2ee39: je     0x0000000105c2ee56
+  0x0000000105c2ee3f: mov    (%rax),%rdi
+  0x0000000105c2ee42: test   %rdi,%rdi
+  0x0000000105c2ee45: je     0x0000000105c2ee56
+  0x0000000105c2ee4b: lock cmpxchg %rdi,(%rbx)
+  0x0000000105c2ee50: jne    0x0000000105c2eead  ;*monitorexit
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@34 (line 12)
+
+  0x0000000105c2ee56: mov    %rsi,%rax
+  0x0000000105c2ee59: jmpq   0x0000000105c2eee8
+  0x0000000105c2ee5e: mov    %rax,0x8(%rsp)
+  0x0000000105c2ee63: movq   $0xffffffffffffffff,(%rsp)
+  0x0000000105c2ee6b: callq  0x0000000105c2c760  ; OopMap{off=784}
+                                                ;*synchronization entry
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@-1 (line 7)
+                                                ;   {runtime_call}
+  0x0000000105c2ee70: jmpq   0x0000000105c2eb9b
+  0x0000000105c2ee75: callq  0x0000000105c26ac0  ; OopMap{rdx=Oop off=794}
+                                                ;*monitorenter
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@10 (line 8)
+                                                ;   {runtime_call}
+  0x0000000105c2ee7a: mov    %rdx,0x8(%rsp)
+  0x0000000105c2ee7f: mov    %rsi,(%rsp)
+  0x0000000105c2ee83: callq  0x0000000105c294a0  ; OopMap{rdx=Oop [48]=Oop off=808}
+                                                ;*monitorenter
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@10 (line 8)
+                                                ;   {runtime_call}
+  0x0000000105c2ee88: jmpq   0x0000000105c2ecb6
+  0x0000000105c2ee8d: mov    %rdx,%rdx
+  0x0000000105c2ee90: callq  0x0000000105c27220  ; OopMap{[48]=Oop off=821}
+                                                ;*new  ; - org.mango.demo.mt.VolatileSingleton::getInstance@17 (line 10)
+                                                ;   {runtime_call}
+  0x0000000105c2ee95: jmpq   0x0000000105c2ed3e
+  0x0000000105c2ee9a: lea    0x28(%rsp),%rax
+  0x0000000105c2ee9f: mov    %rax,(%rsp)
+  0x0000000105c2eea3: callq  0x0000000105c298e0  ;   {runtime_call}
+  0x0000000105c2eea8: jmpq   0x0000000105c2edd0
+  0x0000000105c2eead: lea    0x28(%rsp),%rax
+  0x0000000105c2eeb2: mov    %rax,(%rsp)
+  0x0000000105c2eeb6: callq  0x0000000105c298e0  ;   {runtime_call}
+  0x0000000105c2eebb: jmp    0x0000000105c2ee56
+  0x0000000105c2eebd: nop
+  0x0000000105c2eebe: nop
+  0x0000000105c2eebf: mov    0x2a8(%r15),%rax
+  0x0000000105c2eec6: movabs $0x0,%r10
+  0x0000000105c2eed0: mov    %r10,0x2a8(%r15)
+  0x0000000105c2eed7: movabs $0x0,%r10
+  0x0000000105c2eee1: mov    %r10,0x2b0(%r15)
+  0x0000000105c2eee8: add    $0x40,%rsp
+  0x0000000105c2eeec: pop    %rbp
+  0x0000000105c2eeed: jmpq   0x0000000105b99520  ;   {runtime_call}
+  0x0000000105c2eef2: hlt
+  0x0000000105c2eef3: hlt
+  0x0000000105c2eef4: hlt
+  0x0000000105c2eef5: hlt
+  0x0000000105c2eef6: hlt
+  0x0000000105c2eef7: hlt
+  0x0000000105c2eef8: hlt
+  0x0000000105c2eef9: hlt
+  0x0000000105c2eefa: hlt
+  0x0000000105c2eefb: hlt
+  0x0000000105c2eefc: hlt
+  0x0000000105c2eefd: hlt
+  0x0000000105c2eefe: hlt
+  0x0000000105c2eeff: hlt
+[Stub Code]
+  0x0000000105c2ef00: nop                       ;   {no_reloc}
+  0x0000000105c2ef01: nop
+  0x0000000105c2ef02: nop
+  0x0000000105c2ef03: nop
+  0x0000000105c2ef04: nop
+  0x0000000105c2ef05: movabs $0x0,%rbx          ;   {static_stub}
+  0x0000000105c2ef0f: jmpq   0x0000000105c2ef0f  ;   {runtime_call}
+[Exception Handler]
+  0x0000000105c2ef14: callq  0x0000000105c28960  ;   {runtime_call}
+  0x0000000105c2ef19: mov    %rsp,-0x28(%rsp)
+  0x0000000105c2ef1e: sub    $0x80,%rsp
+  0x0000000105c2ef25: mov    %rax,0x78(%rsp)
+  0x0000000105c2ef2a: mov    %rcx,0x70(%rsp)
+  0x0000000105c2ef2f: mov    %rdx,0x68(%rsp)
+  0x0000000105c2ef34: mov    %rbx,0x60(%rsp)
+  0x0000000105c2ef39: mov    %rbp,0x50(%rsp)
+  0x0000000105c2ef3e: mov    %rsi,0x48(%rsp)
+  0x0000000105c2ef43: mov    %rdi,0x40(%rsp)
+  0x0000000105c2ef48: mov    %r8,0x38(%rsp)
+  0x0000000105c2ef4d: mov    %r9,0x30(%rsp)
+  0x0000000105c2ef52: mov    %r10,0x28(%rsp)
+  0x0000000105c2ef57: mov    %r11,0x20(%rsp)
+  0x0000000105c2ef5c: mov    %r12,0x18(%rsp)
+  0x0000000105c2ef61: mov    %r13,0x10(%rsp)
+  0x0000000105c2ef66: mov    %r14,0x8(%rsp)
+  0x0000000105c2ef6b: mov    %r15,(%rsp)
+  0x0000000105c2ef6f: movabs $0x1025de684,%rdi  ;   {external_word}
+  0x0000000105c2ef79: movabs $0x105c2ef19,%rsi  ;   {internal_word}
+  0x0000000105c2ef83: mov    %rsp,%rdx
+  0x0000000105c2ef86: and    $0xfffffffffffffff0,%rsp
+  0x0000000105c2ef8a: callq  0x00000001024071f6  ;   {runtime_call}
+  0x0000000105c2ef8f: hlt
+[Deopt Handler Code]
+  0x0000000105c2ef90: movabs $0x105c2ef90,%r10  ;   {section_word}
+  0x0000000105c2ef9a: push   %r10
+  0x0000000105c2ef9c: jmpq   0x0000000105b72500  ;   {runtime_call}
+  0x0000000105c2efa1: hlt
+  0x0000000105c2efa2: hlt
+  0x0000000105c2efa3: hlt
+  0x0000000105c2efa4: hlt
+  0x0000000105c2efa5: hlt
+  0x0000000105c2efa6: hlt
+  0x0000000105c2efa7: hlt
+Decoding compiled method 0x0000000105c3ab90:
+Code:
+[Entry Point]
+[Verified Entry Point]
+[Constants]
+  # {method} {0x00000001042d6ab0} 'getInstance' '()Lorg/mango/demo/mt/VolatileSingleton;' in 'org/mango/demo/mt/VolatileSingleton'
+  #           [sp+0x30]  (sp of caller)
+  0x0000000105c3ad00: mov    %eax,-0x14000(%rsp)
+  0x0000000105c3ad07: push   %rbp
+  0x0000000105c3ad08: sub    $0x20,%rsp         ;*synchronization entry
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@-1 (line 7)
+
+  0x0000000105c3ad0c: movabs $0x795779f40,%r10  ;   {oop(a 'java/lang/Class' = 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c3ad16: mov    0x68(%r10),%r11d   ;*getstatic instance
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@0 (line 7)
+
+  0x0000000105c3ad1a: test   %r11d,%r11d
+  0x0000000105c3ad1d: je     0x0000000105c3ad40  ;*ifnonnull
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@3 (line 7)
+
+  0x0000000105c3ad1f: movabs $0x795779f40,%r10  ;   {oop(a 'java/lang/Class' = 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c3ad29: mov    0x68(%r10),%r11d
+  0x0000000105c3ad2d: mov    %r11,%rax
+  0x0000000105c3ad30: shl    $0x3,%rax          ;*getstatic instance
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@37 (line 14)
+
+  0x0000000105c3ad34: add    $0x20,%rsp
+  0x0000000105c3ad38: pop    %rbp
+  0x0000000105c3ad39: test   %eax,-0x4466d3f(%rip)        # 0x00000001017d4000
+                                                ;   {poll_return}
+  0x0000000105c3ad3f: retq
+  0x0000000105c3ad40: mov    (%r10),%rax
+  0x0000000105c3ad43: mov    %rax,%r10
+  0x0000000105c3ad46: and    $0x7,%r10
+  0x0000000105c3ad4a: cmp    $0x5,%r10
+  0x0000000105c3ad4e: jne    0x0000000105c3af1d
+  0x0000000105c3ad54: mov    $0xf80003df,%r11d  ;   {metadata('java/lang/Class')}
+  0x0000000105c3ad5a: movabs $0x0,%r10
+  0x0000000105c3ad64: lea    (%r10,%r11,8),%r10
+  0x0000000105c3ad68: mov    0xa8(%r10),%r10
+  0x0000000105c3ad6f: mov    %r10,%r11
+  0x0000000105c3ad72: or     %r15,%r11
+  0x0000000105c3ad75: mov    %r11,%r8
+  0x0000000105c3ad78: xor    %rax,%r8
+  0x0000000105c3ad7b: test   $0xffffffffffffff87,%r8
+  0x0000000105c3ad82: jne    0x0000000105c3af95  ;*monitorenter
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@10 (line 8)
+
+  0x0000000105c3ad88: movabs $0x795779f40,%r10  ;   {oop(a 'java/lang/Class' = 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c3ad92: mov    0x68(%r10),%r10d   ;*getstatic instance
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@11 (line 9)
+
+  0x0000000105c3ad96: mov    $0x7,%ebp
+  0x0000000105c3ad9b: test   %r10d,%r10d
+  0x0000000105c3ad9e: je     0x0000000105c3ae72  ;*monitorexit
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@28 (line 12)
+
+  0x0000000105c3ada4: movabs $0x795779f40,%r10  ;   {oop(a 'java/lang/Class' = 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c3adae: and    (%r10),%rbp
+  0x0000000105c3adb1: cmp    $0x5,%rbp
+  0x0000000105c3adb5: je     0x0000000105c3ad1f
+  0x0000000105c3adbb: movabs $0x795779f40,%r11  ;   {oop(a 'java/lang/Class' = 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c3adc5: lea    0x10(%rsp),%rax
+  0x0000000105c3adca: cmpq   $0x0,(%rax)
+  0x0000000105c3add1: je     0x0000000105c3ae4b
+  0x0000000105c3add7: mov    (%r11),%r10
+  0x0000000105c3adda: test   $0x2,%r10
+  0x0000000105c3ade1: je     0x0000000105c3ae43
+  0x0000000105c3ade3: mov    0x16(%r10),%rax
+  0x0000000105c3ade7: xor    %r15,%rax
+  0x0000000105c3adea: or     0x26(%r10),%rax
+  0x0000000105c3adee: jne    0x0000000105c3ae4b
+  0x0000000105c3adf0: mov    0x36(%r10),%rax
+  0x0000000105c3adf4: or     0x3e(%r10),%rax
+  0x0000000105c3adf8: jne    0x0000000105c3ae04
+  0x0000000105c3adfa: movq   $0x0,0x16(%r10)
+  0x0000000105c3ae02: jmp    0x0000000105c3ae4b
+  0x0000000105c3ae04: cmpq   $0x0,0x46(%r10)
+  0x0000000105c3ae0c: je     0x0000000105c3ae37
+  0x0000000105c3ae0e: movq   $0x0,0x16(%r10)
+  0x0000000105c3ae16: lock addl $0x0,(%rsp)
+  0x0000000105c3ae1b: cmpq   $0x0,0x46(%r10)
+  0x0000000105c3ae23: jne    0x0000000105c3ae3c
+  0x0000000105c3ae25: movabs $0x0,%rax
+  0x0000000105c3ae2f: lock cmpxchg %r15,0x16(%r10)
+  0x0000000105c3ae35: jne    0x0000000105c3ae3c
+  0x0000000105c3ae37: or     $0x1,%eax
+  0x0000000105c3ae3a: jmp    0x0000000105c3ae4b
+  0x0000000105c3ae3c: test   $0x0,%eax
+  0x0000000105c3ae41: jmp    0x0000000105c3ae4b
+  0x0000000105c3ae43: mov    (%rax),%r10
+  0x0000000105c3ae46: lock cmpxchg %r10,(%r11)
+  0x0000000105c3ae4b: je     0x0000000105c3ad1f
+  0x0000000105c3ae51: movabs $0x795779f40,%rdi  ;   {oop(a 'java/lang/Class' = 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c3ae5b: lea    0x10(%rsp),%rsi    ;*monitorenter
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@10 (line 8)
+
+  0x0000000105c3ae60: movabs $0x1024eabea,%r10
+  0x0000000105c3ae6a: callq  *%r10              ;*monitorexit
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@28 (line 12)
+
+  0x0000000105c3ae6d: jmpq   0x0000000105c3ad1f
+  0x0000000105c3ae72: mov    0x60(%r15),%rax
+  0x0000000105c3ae76: mov    %rax,%r10
+  0x0000000105c3ae79: add    $0x10,%r10
+  0x0000000105c3ae7d: cmp    0x70(%r15),%r10
+  0x0000000105c3ae81: jae    0x0000000105c3aefc
+  0x0000000105c3ae83: mov    %r10,0x60(%r15)
+  0x0000000105c3ae87: prefetchw 0xc0(%r10)
+  0x0000000105c3ae8f: mov    $0xf800c105,%r10d  ;   {metadata('org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c3ae95: shl    $0x3,%r10
+  0x0000000105c3ae99: mov    0xa8(%r10),%r10
+  0x0000000105c3aea0: mov    %r10,(%rax)
+  0x0000000105c3aea3: movl   $0xf800c105,0x8(%rax)  ;   {metadata('org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c3aeaa: mov    %r12d,0xc(%rax)
+  0x0000000105c3aeae: mov    %rax,%r10
+  0x0000000105c3aeb1: mov    %r10,(%rsp)        ;*new  ; - org.mango.demo.mt.VolatileSingleton::getInstance@17 (line 10)
+
+  0x0000000105c3aeb5: mov    %r10,%rsi
+  0x0000000105c3aeb8: data32 xchg %ax,%ax
+  0x0000000105c3aebb: callq  0x0000000105b710a0  ; OopMap{[0]=Oop off=448}
+                                                ;*invokespecial <init>
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@21 (line 10)
+                                                ;   {optimized virtual_call}
+  0x0000000105c3aec0: mov    (%rsp),%r10
+  0x0000000105c3aec4: shr    $0x3,%r10
+  0x0000000105c3aec8: movabs $0x795779f40,%r11  ;   {oop(a 'java/lang/Class' = 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c3aed2: mov    %r10d,0x68(%r11)
+  0x0000000105c3aed6: movabs $0x795779f40,%r10  ;   {oop(a 'java/lang/Class' = 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c3aee0: shr    $0x9,%r10
+  0x0000000105c3aee4: movabs $0xffa00000,%r11
+  0x0000000105c3aeee: mov    %r12b,(%r11,%r10,1)
+  0x0000000105c3aef2: lock addl $0x0,(%rsp)     ;*putstatic instance
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@24 (line 10)
+
+  0x0000000105c3aef7: jmpq   0x0000000105c3ada4
+  0x0000000105c3aefc: movabs $0x7c0060828,%rsi  ;   {metadata('org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c3af06: nop
+  0x0000000105c3af07: callq  0x0000000105c2e3e0  ; OopMap{off=524}
+                                                ;*new  ; - org.mango.demo.mt.VolatileSingleton::getInstance@17 (line 10)
+                                                ;   {runtime_call}
+  0x0000000105c3af0c: jmp    0x0000000105c3aeae
+  0x0000000105c3af0e: movabs $0x795779f40,%r11  ;   {oop(a 'java/lang/Class' = 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c3af18: lock cmpxchg %r10,(%r11)
+  0x0000000105c3af1d: movabs $0x795779f40,%r11  ;   {oop(a 'java/lang/Class' = 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c3af27: lea    0x10(%rsp),%rbx
+  0x0000000105c3af2c: mov    (%r11),%rax
+  0x0000000105c3af2f: test   $0x2,%rax
+  0x0000000105c3af35: jne    0x0000000105c3af5b
+  0x0000000105c3af37: or     $0x1,%rax
+  0x0000000105c3af3b: mov    %rax,(%rbx)
+  0x0000000105c3af3e: lock cmpxchg %rbx,(%r11)
+  0x0000000105c3af43: je     0x0000000105c3af74
+  0x0000000105c3af49: sub    %rsp,%rax
+  0x0000000105c3af4c: and    $0xfffffffffffff007,%rax
+  0x0000000105c3af53: mov    %rax,(%rbx)
+  0x0000000105c3af56: jmpq   0x0000000105c3af74
+  0x0000000105c3af5b: movq   $0x3,(%rbx)
+  0x0000000105c3af62: mov    %rax,%rbx
+  0x0000000105c3af65: mov    0x16(%rbx),%rax
+  0x0000000105c3af69: test   %rax,%rax
+  0x0000000105c3af6c: jne    0x0000000105c3af74
+  0x0000000105c3af6e: lock cmpxchg %r15,0x16(%rbx)
+  0x0000000105c3af74: je     0x0000000105c3ad88
+  0x0000000105c3af7a: movabs $0x795779f40,%rsi  ;   {oop(a 'java/lang/Class' = 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c3af84: lea    0x10(%rsp),%rdx
+  0x0000000105c3af89: xchg   %ax,%ax
+  0x0000000105c3af8b: callq  0x0000000105c2b6e0  ; OopMap{off=656}
+                                                ;*monitorenter
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@10 (line 8)
+                                                ;   {runtime_call}
+  0x0000000105c3af90: jmpq   0x0000000105c3ad88
+  0x0000000105c3af95: test   $0x7,%r8
+  0x0000000105c3af9c: jne    0x0000000105c3af0e
+  0x0000000105c3afa2: test   $0x300,%r8
+  0x0000000105c3afa9: jne    0x0000000105c3afb8
+  0x0000000105c3afab: and    $0x37f,%rax
+  0x0000000105c3afb2: mov    %rax,%r11
+  0x0000000105c3afb5: or     %r15,%r11
+  0x0000000105c3afb8: movabs $0x795779f40,%r10  ;   {oop(a 'java/lang/Class' = 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c3afc2: lock cmpxchg %r11,(%r10)
+  0x0000000105c3afc7: jne    0x0000000105c3af7a
+  0x0000000105c3afc9: jmpq   0x0000000105c3ad88  ;*new
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@17 (line 10)
+
+  0x0000000105c3afce: mov    %rax,%rbx
+  0x0000000105c3afd1: jmp    0x0000000105c3afd6  ;*invokespecial <init>
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@21 (line 10)
+
+  0x0000000105c3afd3: mov    %rax,%rbx
+  0x0000000105c3afd6: movabs $0x795779f40,%r10  ;   {oop(a 'java/lang/Class' = 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c3afe0: and    (%r10),%rbp
+  0x0000000105c3afe3: cmp    $0x5,%rbp
+  0x0000000105c3afe7: jne    0x0000000105c3aff6  ;*monitorexit
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@34 (line 12)
+
+  0x0000000105c3afe9: mov    %rbx,%rsi
+  0x0000000105c3afec: add    $0x20,%rsp
+  0x0000000105c3aff0: pop    %rbp
+  0x0000000105c3aff1: jmpq   0x0000000105c2b5e0  ;   {runtime_call}
+  0x0000000105c3aff6: movabs $0x795779f40,%r11  ;   {oop(a 'java/lang/Class' = 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c3b000: lea    0x10(%rsp),%rax
+  0x0000000105c3b005: cmpq   $0x0,(%rax)
+  0x0000000105c3b00c: je     0x0000000105c3b086
+  0x0000000105c3b012: mov    (%r11),%r10
+  0x0000000105c3b015: test   $0x2,%r10
+  0x0000000105c3b01c: je     0x0000000105c3b07e
+  0x0000000105c3b01e: mov    0x16(%r10),%rax
+  0x0000000105c3b022: xor    %r15,%rax
+  0x0000000105c3b025: or     0x26(%r10),%rax
+  0x0000000105c3b029: jne    0x0000000105c3b086
+  0x0000000105c3b02b: mov    0x36(%r10),%rax
+  0x0000000105c3b02f: or     0x3e(%r10),%rax
+  0x0000000105c3b033: jne    0x0000000105c3b03f
+  0x0000000105c3b035: movq   $0x0,0x16(%r10)
+  0x0000000105c3b03d: jmp    0x0000000105c3b086
+  0x0000000105c3b03f: cmpq   $0x0,0x46(%r10)
+  0x0000000105c3b047: je     0x0000000105c3b072
+  0x0000000105c3b049: movq   $0x0,0x16(%r10)
+  0x0000000105c3b051: lock addl $0x0,(%rsp)
+  0x0000000105c3b056: cmpq   $0x0,0x46(%r10)
+  0x0000000105c3b05e: jne    0x0000000105c3b077
+  0x0000000105c3b060: movabs $0x0,%rax
+  0x0000000105c3b06a: lock cmpxchg %r15,0x16(%r10)
+  0x0000000105c3b070: jne    0x0000000105c3b077
+  0x0000000105c3b072: or     $0x1,%eax
+  0x0000000105c3b075: jmp    0x0000000105c3b086
+  0x0000000105c3b077: test   $0x0,%eax
+  0x0000000105c3b07c: jmp    0x0000000105c3b086
+  0x0000000105c3b07e: mov    (%rax),%r10
+  0x0000000105c3b081: lock cmpxchg %r10,(%r11)
+  0x0000000105c3b086: je     0x0000000105c3afe9
+  0x0000000105c3b08c: movabs $0x795779f40,%rdi  ;   {oop(a 'java/lang/Class' = 'org/mango/demo/mt/VolatileSingleton')}
+  0x0000000105c3b096: lea    0x10(%rsp),%rsi    ;*monitorenter
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@10 (line 8)
+
+  0x0000000105c3b09b: movabs $0x1024eabea,%r10
+  0x0000000105c3b0a5: callq  *%r10              ;*monitorexit
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@34 (line 12)
+
+  0x0000000105c3b0a8: jmpq   0x0000000105c3afe9  ;*monitorexit
+                                                ; - org.mango.demo.mt.VolatileSingleton::getInstance@28 (line 12)
+
+  0x0000000105c3b0ad: hlt
+  0x0000000105c3b0ae: hlt
+  0x0000000105c3b0af: hlt
+  0x0000000105c3b0b0: hlt
+  0x0000000105c3b0b1: hlt
+  0x0000000105c3b0b2: hlt
+  0x0000000105c3b0b3: hlt
+  0x0000000105c3b0b4: hlt
+  0x0000000105c3b0b5: hlt
+  0x0000000105c3b0b6: hlt
+  0x0000000105c3b0b7: hlt
+  0x0000000105c3b0b8: hlt
+  0x0000000105c3b0b9: hlt
+  0x0000000105c3b0ba: hlt
+  0x0000000105c3b0bb: hlt
+  0x0000000105c3b0bc: hlt
+  0x0000000105c3b0bd: hlt
+  0x0000000105c3b0be: hlt
+  0x0000000105c3b0bf: hlt
+[Stub Code]
+  0x0000000105c3b0c0: movabs $0x0,%rbx          ;   {no_reloc}
+  0x0000000105c3b0ca: jmpq   0x0000000105c3b0ca  ;   {runtime_call}
+[Exception Handler]
+  0x0000000105c3b0cf: jmpq   0x0000000105b997e0  ;   {runtime_call}
+[Deopt Handler Code]
+  0x0000000105c3b0d4: callq  0x0000000105c3b0d9
+  0x0000000105c3b0d9: subq   $0x5,(%rsp)
+  0x0000000105c3b0de: jmpq   0x0000000105b72500  ;   {runtime_call}
+  0x0000000105c3b0e3: hlt
+  0x0000000105c3b0e4: hlt
+  0x0000000105c3b0e5: hlt
+  0x0000000105c3b0e6: hlt
+  0x0000000105c3b0e7: hlt
+
+Process finished with exit code 0

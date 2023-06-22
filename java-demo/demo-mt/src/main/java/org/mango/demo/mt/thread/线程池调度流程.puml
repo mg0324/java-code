@@ -1,0 +1,22 @@
+@startuml
+
+start
+:任务提交;
+if (线程数小于corePoolSize) then (是)
+  :分配线程执行;
+  kill;
+else (否)
+  :提交到工作队列;
+  if (工作队列是否已满) then (否)
+    :等待执行;
+    kill;
+  else (是)
+    :提交到线程池;
+    if (是否达到maxinumPoolSize) then (是)
+       #pink:提交失败，执行拒绝策略;
+    else (否)
+       :分配线程执行;
+    endif
+stop
+
+@enduml

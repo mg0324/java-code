@@ -1,0 +1,13 @@
+@startuml
+
+start
+repeat
+#fff:beforeExecute();
+:执行;
+#fff:afterExecute();
+repeat while(线程池运行中) is (继续运行) not (退出)
+:退出;
+#fff:terminated();
+stop
+
+@enduml
