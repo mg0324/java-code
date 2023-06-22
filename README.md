@@ -10,4 +10,5 @@ java study code - java学习代码
   * demo-mt - mt多线程示例
   * demo-nio - nio示例
   * demo-solon - solon示例
+  * demo-serial - 序列化示例
 * spring-hello-world - 第一个spring项目，hello spring
