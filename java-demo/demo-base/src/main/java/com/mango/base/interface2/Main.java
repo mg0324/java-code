@@ -23,13 +23,6 @@ public class Main {
         //int a = 1/0;
         throw new ClassCastException("xx");
     }
-
-    public class MyClass {
-        public int foo(List list) {return 1;}
-        public String foo(List list) {return "1";}
-    } 
-
-    SortedSet
     
 }
 
