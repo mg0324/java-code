@@ -15,4 +15,5 @@ java study code - java学习代码
   * demo-web2.5 - web servlet2.5示例
   * demo-base - java基础示例
   * demo-jdbc - jdbc示例
+  * demo-plugin - plugin插件开发示例
 * spring-hello-world - 第一个spring项目，hello spring

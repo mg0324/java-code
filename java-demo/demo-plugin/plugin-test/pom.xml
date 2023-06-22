@@ -5,33 +5,24 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.mango</groupId>
-        <artifactId>java-code</artifactId>
+        <artifactId>demo-plugin</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <modules>
-        <module>demo-class-executor</module>
-        <module>demo-jvm</module>
-        <module>demo-mt</module>
-        <module>demo-nio</module>
-        <module>demo-future</module>
-        <module>demo-solon</module>
-        <module>demo-serial</module>
-        <module>demo-web3.0</module>
-        <module>demo-web2.5</module>
-        <module>demo-base</module>
-        <module>demo-jdbc</module>
-        <module>demo-plugin</module>
-    </modules>
-
-    <packaging>pom</packaging>
-
-    <artifactId>java-demo</artifactId>
+    <artifactId>plugin-test</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.mango</groupId>
+            <artifactId>plugin-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>
