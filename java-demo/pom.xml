@@ -15,6 +15,7 @@
         <module>demo-mt</module>
         <module>demo-nio</module>
         <module>demo-future</module>
+        <module>demo-solon</module>
     </modules>
 
     <packaging>pom</packaging>
