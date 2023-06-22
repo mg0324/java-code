@@ -1,4 +1,4 @@
-package main.java.com.mango.serial;
+package com.mango.serial;
 
 import java.util.Date;
 

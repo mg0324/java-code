@@ -1,4 +1,4 @@
-package main.java.com.mango.serial;
+package com.mango.serial;
 
 import com.alibaba.fastjson2.JSONObject;
 import java.io.*;

@@ -1,4 +1,4 @@
-package main.java.com.mango.serial;
+package com.mango.serial;
 
 import com.google.protobuf.util.Timestamps;
 import java.io.*;

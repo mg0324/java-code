@@ -1,4 +1,4 @@
-package main.java.com.mango.serial;
+package com.mango.serial;
 
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.io.Output;

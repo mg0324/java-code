@@ -1,4 +1,4 @@
-package main.java.com.mango.serial;
+package com.mango.serial;
 
 import com.caucho.hessian.io.Hessian2Input;
 import com.caucho.hessian.io.Hessian2Output;
