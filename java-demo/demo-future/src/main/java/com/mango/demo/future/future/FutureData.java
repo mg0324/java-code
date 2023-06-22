@@ -1,4 +1,4 @@
-package com.mango.demo.other.future;
+package com.mango.demo.future.future;
 
 import java.util.concurrent.Future;
 import java.util.concurrent.RunnableFuture;

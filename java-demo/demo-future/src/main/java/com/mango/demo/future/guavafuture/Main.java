@@ -1,4 +1,4 @@
-package com.mango.demo.other.guavafuture;
+package com.mango.demo.future.guavafuture;
 
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.ListeningExecutorService;

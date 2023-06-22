@@ -1,4 +1,4 @@
-package com.mango.demo.other.final2;
+package com.mango.demo.future.final2;
 
 /**
  * 不变猫对象

@@ -1,4 +1,4 @@
-package com.mango.demo.other.disruptor;
+package com.mango.demo.future.disruptor;
 
 import com.lmax.disruptor.EventFactory;
 

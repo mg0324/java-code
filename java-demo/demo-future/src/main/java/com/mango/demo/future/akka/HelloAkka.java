@@ -1,4 +1,4 @@
-package com.mango.demo.other.akka;
+package com.mango.demo.future.akka;
 
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;

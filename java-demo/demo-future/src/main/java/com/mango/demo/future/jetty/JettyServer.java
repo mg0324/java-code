@@ -1,5 +1,6 @@
-package com.mango.demo.other.jetty;
+package com.mango.demo.future.jetty;
 
+import jakarta.servlet.Servlet;
 import org.eclipse.jetty.security.ConstraintSecurityHandler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.ContextHandler;
@@ -33,7 +34,7 @@ public class JettyServer {
         servletContextHandler.setSecurityHandler(new ConstraintSecurityHandler());
         servletContextHandler.setSessionHandler(new SessionHandler());
         servletContextHandler.setContextPath("/");
-        servletContextHandler.addServlet(HelloServlet.class,"/hello");
+        servletContextHandler.addServlet((Class<? extends Servlet>) HelloServlet.class,"/hello");
 
         // 组装处理器
         HandlerList handlers = new HandlerList();

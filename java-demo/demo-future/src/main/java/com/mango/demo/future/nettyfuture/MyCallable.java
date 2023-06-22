@@ -1,4 +1,4 @@
-package com.mango.demo.other.nettyfuture;
+package com.mango.demo.future.nettyfuture;
 
 import java.util.concurrent.Callable;
 

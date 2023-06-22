@@ -1,4 +1,4 @@
-package com.mango.demo.other.jdkfuture;
+package com.mango.demo.future.jdkfuture;
 
 import java.util.concurrent.Callable;
 

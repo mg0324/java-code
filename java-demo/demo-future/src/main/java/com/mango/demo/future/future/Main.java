@@ -1,4 +1,4 @@
-package com.mango.demo.other.future;
+package com.mango.demo.future.future;
 
 /**
  * @Author: mango

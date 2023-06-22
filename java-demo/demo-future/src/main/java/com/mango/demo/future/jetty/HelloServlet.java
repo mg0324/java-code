@@ -1,4 +1,4 @@
-package com.mango.demo.other.jetty;
+package com.mango.demo.future.jetty;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

@@ -1,4 +1,4 @@
-package com.mango.demo.other.completablefuture;
+package com.mango.demo.future.completablefuture;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executors;

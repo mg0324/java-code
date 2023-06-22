@@ -1,4 +1,4 @@
-package com.mango.demo.other.guavafuture;
+package com.mango.demo.future.guavafuture;
 
 import java.util.concurrent.Callable;
 

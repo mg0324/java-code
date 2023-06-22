@@ -1,4 +1,4 @@
-package com.mango.demo.other.singleton;
+package com.mango.demo.future.singleton;
 
 /**
  * 静态内部类 - 利用类加载一次特性确保只有一个实例（线程安全）
