@@ -12,4 +12,5 @@ java study code - java学习代码
   * demo-solon - solon示例
   * demo-serial - 序列化示例
   * demo-web3.0 - web servlet3.0示例
+  * demo-web2.5 - web servlet2.5示例
 * spring-hello-world - 第一个spring项目，hello spring
