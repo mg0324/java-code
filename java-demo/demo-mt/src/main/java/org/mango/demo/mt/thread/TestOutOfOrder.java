@@ -19,12 +19,12 @@ public class TestOutOfOrder {
                     x = b;
             });
 
-            Thread other = new Thread(() -> {
+            Thread future = new Thread(() -> {
                     b = 1;
                     y = a;
             });
-            one.start();other.start();
-            one.join();other.join();
+            one.start();future.start();
+            one.join();future.join();
             String result = "第" + i + "次 (" + x + "," + y + "）";
             if(x == 0 && y == 0) {
                 System.err.println(result);
