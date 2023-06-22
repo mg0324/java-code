@@ -7,8 +7,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>demo-web2.5</artifactId>
-    <packaging>war</packaging>
+    <artifactId>demo-jdbc</artifactId>
 
     <properties>
         <java.version>1.8</java.version>
@@ -16,12 +15,15 @@
     </properties>
 
     <dependencies>
-
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>2.5</version>
-            <scope>provided</scope>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.20</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-dbutils</groupId>
+            <artifactId>commons-dbutils</artifactId>
+            <version>1.7</version>
         </dependency>
     </dependencies>
 

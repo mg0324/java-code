@@ -10,7 +10,7 @@
     </parent> -->
     <parent>
         <groupId>com.mango</groupId>
-        <artifactId>java-code</artifactId>
+        <artifactId>java-demo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <artifactId>demo-serial</artifactId>
