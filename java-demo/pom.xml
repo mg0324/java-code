@@ -13,6 +13,7 @@
         <module>demo-class-executor</module>
         <module>demo-jvm</module>
         <module>demo-mt</module>
+        <module>demo-nio</module>
     </modules>
 
     <packaging>pom</packaging>
