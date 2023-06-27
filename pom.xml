@@ -15,7 +15,7 @@
 	<name>java-code</name>
 	<description>Demo project for Spring Boot</description>
 	<modules>
-		<module>spring-hello-world</module>
+		<module>spring-demo</module>
 		<module>java-demo</module>
 	</modules>
 	<properties>

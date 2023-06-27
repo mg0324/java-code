@@ -9,7 +9,13 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>spring-hello-world</artifactId>
+    <modules>
+        <module>spring-hello-world</module>
+    </modules>
+
+    <packaging>pom</packaging>
+
+    <artifactId>spring-demo</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
