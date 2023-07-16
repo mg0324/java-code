@@ -10,6 +10,10 @@ public class TestService {
     private String name;
 
     public String sayHello(String name){
-        return "hello " + name;
+        return "get bean " + name;
+    }
+
+    public TestService create(){
+        return new TestService();
     }
 }

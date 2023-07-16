@@ -3,4 +3,5 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="testService" class="com.mango.bean.TestService"></bean>
+<!--    <bean id="testService" scope="prototype" class="com.mango.bean.TestService" factory-method="create"></bean>-->
 </beans>

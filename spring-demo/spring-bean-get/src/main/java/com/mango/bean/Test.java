@@ -1,6 +1,5 @@
 package com.mango.bean;
 
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -20,20 +19,23 @@ public class Test {
         // 通过ID加ClassType获取Bean
         TestService testService2 = applicationContext.getBean("testService",TestService.class);
         System.out.println(testService2.hashCode());
-        System.out.println(testService1.sayHello("by name and type"));
+        System.out.println(testService2.sayHello("by name and type"));
         // 通过ClassType获取Bean
         TestService testService3 = applicationContext.getBean(TestService.class);
         System.out.println(testService3.hashCode());
-        System.out.println(testService1.sayHello("by type"));
+        System.out.println(testService3.sayHello("by type"));
+
     }
 }
 
 /**
  * 打印：
  * 1773283386
- * hello by name
+ * get bean by name
  * 1773283386
- * hello by name and type
+ * get bean by name and type
  * 1773283386
- * hello by type
+ * get bean by type
+ * 1773283386
+ * get bean by type and factoryMethod
  */
