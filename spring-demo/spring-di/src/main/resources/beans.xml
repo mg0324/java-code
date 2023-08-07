@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id = "simpleDateFormat" class = "java.text.SimpleDateFormat" >
+        <constructor-arg value = "yyyy-MM-dd" ></constructor-arg>
+    </bean>
+    <!-- 基于setter方法注入 -->
+    <bean id="student" class="com.mango.di.Student">
+        <property name="name" value="小刚"></property>
+        <property name="age" value="20"></property>
+        <property name="birthday">
+            <bean factory-bean="simpleDateFormat" factory-method="parse">
+                <constructor-arg value="1993-03-01"></constructor-arg>
+            </bean>
+        </property>
+        <property name="teacher" ref="teacher"></property>
+    </bean>
+    <!-- 基于构造器注入 -->
+    <bean id="teacher" class="com.mango.di.Teacher">
+        <constructor-arg value="王老师"></constructor-arg>
+        <constructor-arg value="1"></constructor-arg>
+    </bean>
+</beans>
